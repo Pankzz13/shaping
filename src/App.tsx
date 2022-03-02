@@ -1,17 +1,20 @@
-import { ClientForm } from "./components/ClientForm";
-import { DashBoardForm } from "./components/DashBoardForm";
-import LoginForm from "./components/LoginForm";
-import { UserForm } from "./components/UserForm";
+
+import { ClientForm } from './components/ClientForm';
+import { FooterForm } from './components/FooterForm';
+import { NavigationForm } from './components/NavigationForm';
+
+
 
 
 
 function App() {
   return (
     <div >
-      {/* <LoginForm /> */}
-      {/* <UserForm /> */}
-      <ClientForm />
-      {/* <DashBoardForm /> */}
+     
+      <div >
+        {/* <ClientForm /> */}
+      </div>
+      <FooterForm />
     </div>
   );
 }

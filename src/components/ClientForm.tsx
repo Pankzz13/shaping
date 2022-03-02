@@ -34,7 +34,7 @@ export const ClientForm = () => {
 
 
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<clientInputs>();
+    const { register, handleSubmit, formState: { errors } } = useForm<clientInputs>();
     const onSubmit: SubmitHandler<clientInputs> = (user) => {
         clientAction(user);
     };
@@ -176,18 +176,6 @@ export const ClientForm = () => {
                                         <option value="OT">OT</option>
                                         <option value="ST">ST</option>
                                     </select>
-
-                                    {/* <input type="radio" {...register("assessment")} />
-                                    <label className="toggle">BT</label>
-                                    {/* checked="checked" */}
-
-
-                                    {/* <input type="radio" {...register("assessment")} />
-                                    <label className="toggle">OT</label>
-
-
-                                    <input type="radio" {...register("assessment")} />
-                                    <label className="toggle">ST</label> */}
                                 </span>
 
                             </div>

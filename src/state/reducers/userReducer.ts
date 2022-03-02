@@ -29,6 +29,15 @@ export const userReducer = (state = [], action: any) => {
                 ...state, registerClient: action.payload
             }
 
+        case ActionType.EDIT_CLIENT:
+            return {
+                ...state, editStClient: action.payload
+            }
+        case ActionType.ST_ASSESSMENT:
+            return {
+                ...state, stAssessment: action.payload
+            }
+
         // case ActionType.CURRENT_USER:
         //     return { ...state, currentUser: action.payload }
 

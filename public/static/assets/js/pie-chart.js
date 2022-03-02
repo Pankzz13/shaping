@@ -8,67 +8,67 @@ if ($('#coin_distribution').length) {
             "font-family": "Roboto"
         },
         "graphset": [{
-                "type": "pie",
-                "background-color": "#fff",
-                "legend": {
-                    "background-color": "none",
-                    "border-width": 0,
+            "type": "pie",
+            "background-color": "#fff",
+            "legend": {
+                "background-color": "none",
+                "border-width": 0,
+                "shadow": false,
+                "layout": "float",
+                "margin": "auto auto 16% auto",
+                "marker": {
+                    "border-radius": 3,
+                    "border-width": 0
+                },
+                "item": {
+                    "color": "%backgroundcolor"
+                }
+            },
+            "plotarea": {
+                "background-color": "#FFFFFF",
+                "border-color": "#DFE1E3",
+                "margin": "25% 8%"
+            },
+            "labels": [{
+                "x": "45%",
+                "y": "47%",
+                "width": "10%",
+                "text": "340 Coin",
+                "font-size": 17,
+                "font-weight": 700
+            }],
+            "plot": {
+                "size": 70,
+                "slice": 90,
+                "margin-right": 0,
+                "border-width": 0,
+                "shadow": 0,
+                "value-box": {
+                    "visible": true
+                },
+                "tooltip": {
+                    "text": "%v USD",
                     "shadow": false,
-                    "layout": "float",
-                    "margin": "auto auto 16% auto",
-                    "marker": {
-                        "border-radius": 3,
-                        "border-width": 0
-                    },
-                    "item": {
-                        "color": "%backgroundcolor"
-                    }
-                },
-                "plotarea": {
-                    "background-color": "#FFFFFF",
-                    "border-color": "#DFE1E3",
-                    "margin": "25% 8%"
-                },
-                "labels": [{
-                    "x": "45%",
-                    "y": "47%",
-                    "width": "10%",
-                    "text": "340 Coin",
-                    "font-size": 17,
-                    "font-weight": 700
-                }],
-                "plot": {
-                    "size": 70,
-                    "slice": 90,
-                    "margin-right": 0,
-                    "border-width": 0,
-                    "shadow": 0,
-                    "value-box": {
-                        "visible": true
-                    },
-                    "tooltip": {
-                        "text": "%v USD",
-                        "shadow": false,
-                        "border-radius": 2
-                    }
-                },
-                "series": [{
-                        "values": [1355460],
-                        "text": "Bitcoin",
-                        "background-color": "#4cff63"
-                    },
-                    {
-                        "values": [1585218],
-                        "text": "LiteCoin",
-                        "background-color": "#fd9c21"
-                    },
-                    {
-                        "values": [1064598],
-                        "text": "Euthorium",
-                        "background-color": "#2c13f8"
-                    }
-                ]
+                    "border-radius": 2
+                }
+            },
+            "series": [{
+                "values": [1355460],
+                "text": "Bitcoin",
+                "background-color": "#4cff63"
+            },
+            {
+                "values": [1585218],
+                "text": "LiteCoin",
+                "background-color": "#fd9c21"
+            },
+            {
+                "values": [1064598],
+                "text": "Euthorium",
+                "background-color": "#2c13f8"
             }
+            ]
+        }
 
         ]
     };
@@ -216,7 +216,7 @@ if ($('#ampiechart3').length) {
         }],
         "listeners": [{
             "event": "clickSlice",
-            "method": function(event) {
+            "method": function (event) {
                 var chart = event.chart;
                 if (event.dataItem.dataContext.id != undefined) {
                     selected = event.dataItem.dataContext.id;
@@ -237,7 +237,7 @@ if ($('#ampiechart3').length) {
 
 /*-------------- 4 Pie chart highcharts start ------------*/
 if ($('#highpiechart4').length) {
-    var pieColors = (function() {
+    var pieColors = (function () {
         var colors = [],
             base = Highcharts.getOptions().colors[0],
             i;

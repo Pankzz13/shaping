@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
 import { ActionType } from "../actions-type";
-import { loginUser, registerClient } from "../services/authServices";
+import { loginUser, registerClient, editStClient, stAssessment } from "../services/authServices";
 
 
 
@@ -73,31 +73,48 @@ export const clientAction = (user: any) => {
 }
 
 
+export const editClientActionn = (user: any) => {
+    return async (dispatch: Dispatch) => {
+        const response = await editStClient(user);
+        console.log("edit client info", response);
+        try {
+            dispatch({
+                type: ActionType.EDIT_CLIENT,
+                payload: response
+            });
+        } catch (e: any) {
+            if (
+                e.response.status === 503 ||
+                e.response.status === 500 ||
+                e.response.status === 502
+            ) {
+                console.log("internal server error");
+            }
+        }
+    }
+}
 
-// export const currentUserAction = (token: any) => {
-//     return async (dispatch: Dispatch) => {
-//         try {
-//             const response = await currentUser(token);
-//             // console.log(response);
-//             if (response.status === 200) {
-//                 dispatch({
-//                     type: ActionType.LOGIN_USER,
-//                     payload: token.accessToken,
-//                 });
-//                 dispatch({
-//                     type: ActionType.CURRENT_USER,
-//                     payload: response.data,
-//                 });
-//             }
-//         } catch (e: any) {
-//             console.log("here after data", e.response.data);
-//             if (
-//                 e.response.status === 503 ||
-//                 e.response.status === 500 ||
-//                 e.response.status === 502
-//             ) {
-//                 console.log("No response")
-//             }
-//         }
-//     };
-// };
+
+export const stAssessmentAction = (user: any) => {
+    return async (dispatch: Dispatch) => {
+        const response = await stAssessment(user);
+        console.log("edit client info", response);
+        try {
+            if (response.status === 200) {
+                dispatch({
+                    type: ActionType.ST_ASSESSMENT,
+                    payload: response.data.access
+                });
+                console.log("st Assessment added")
+            }
+        } catch (e: any) {
+            if (
+                e.response.status === 503 ||
+                e.response.status === 500 ||
+                e.response.status === 502
+            ) {
+                console.log("internal server error");
+            }
+        }
+    }
+}

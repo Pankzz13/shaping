@@ -2835,3 +2835,18 @@ table.dataTable thead td {
 }
 
 /*-------------------- END Offset Sidebar ------------------- */
+
+
+/* 2/03/2022 */
+
+/* @media only screen and (max-width: 1200px) {
+    .container {
+        width: 800px !important;
+    }
+} */
+
+.myContainer {
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 400px !important; 
+}

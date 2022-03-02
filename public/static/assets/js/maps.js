@@ -1789,7 +1789,7 @@ function createCustomMarker(image) {
 
     // maybe add a link to it?
     if (undefined != image.url) {
-        holder.onclick = function() {
+        holder.onclick = function () {
             window.location.href = image.url;
         };
         holder.className += ' map-clickable';

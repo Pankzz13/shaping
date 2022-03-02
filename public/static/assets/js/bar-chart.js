@@ -453,25 +453,25 @@ if ($('#ambarchart3').length) {
         },
         "trendLines": [],
         "graphs": [{
-                "balloonText": "Income:[[value]]",
-                "fillAlphas": 0.8,
-                "id": "AmGraph-1",
-                "lineAlpha": 0.2,
-                "title": "Income",
-                "type": "column",
-                "valueField": "income",
-                "fillColorsField": "color"
-            },
-            {
-                "balloonText": "Expenses:[[value]]",
-                "fillAlphas": 0.8,
-                "id": "AmGraph-2",
-                "lineAlpha": 0.2,
-                "title": "Expenses",
-                "type": "column",
-                "valueField": "expenses",
-                "fillColorsField": "color2"
-            }
+            "balloonText": "Income:[[value]]",
+            "fillAlphas": 0.8,
+            "id": "AmGraph-1",
+            "lineAlpha": 0.2,
+            "title": "Income",
+            "type": "column",
+            "valueField": "income",
+            "fillColorsField": "color"
+        },
+        {
+            "balloonText": "Expenses:[[value]]",
+            "fillAlphas": 0.8,
+            "id": "AmGraph-2",
+            "lineAlpha": 0.2,
+            "title": "Expenses",
+            "type": "column",
+            "valueField": "expenses",
+            "fillColorsField": "color2"
+        }
         ],
         "guides": [],
         "valueAxes": [{
@@ -483,40 +483,40 @@ if ($('#ambarchart3').length) {
         "balloon": {},
         "titles": [],
         "dataProvider": [{
-                "year": 2014,
-                "income": 23.5,
-                "expenses": 18.1,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2015,
-                "income": 26.2,
-                "expenses": 22.8,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2016,
-                "income": 30.1,
-                "expenses": 23.9,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2017,
-                "income": 29.5,
-                "expenses": 25.1,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2018,
-                "income": 24.6,
-                "expenses": 25,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            }
+            "year": 2014,
+            "income": 23.5,
+            "expenses": 18.1,
+            "color": "#7474f0",
+            "color2": "#C5C5FD"
+        },
+        {
+            "year": 2015,
+            "income": 26.2,
+            "expenses": 22.8,
+            "color": "#7474f0",
+            "color2": "#C5C5FD"
+        },
+        {
+            "year": 2016,
+            "income": 30.1,
+            "expenses": 23.9,
+            "color": "#7474f0",
+            "color2": "#C5C5FD"
+        },
+        {
+            "year": 2017,
+            "income": 29.5,
+            "expenses": 25.1,
+            "color": "#7474f0",
+            "color2": "#C5C5FD"
+        },
+        {
+            "year": 2018,
+            "income": 24.6,
+            "expenses": 25,
+            "color": "#7474f0",
+            "color2": "#C5C5FD"
+        }
         ],
         "export": {
             "enabled": false
@@ -791,19 +791,19 @@ if ($('#socialads').length) {
             }
         },
         series: [{
-                name: 'Closed',
-                data: [51, 48, 64, 48, 84]
-            }, {
-                name: 'Hold',
-                data: [83, 84, 53, 81, 88]
-            }, {
-                name: 'Pending',
-                data: [93, 84, 53, 53, 48]
-            },
-            {
-                name: 'Active',
-                data: [430, 312, 348, 254, 258]
-            }
+            name: 'Closed',
+            data: [51, 48, 64, 48, 84]
+        }, {
+            name: 'Hold',
+            data: [83, 84, 53, 81, 88]
+        }, {
+            name: 'Pending',
+            data: [93, 84, 53, 53, 48]
+        },
+        {
+            name: 'Active',
+            data: [430, 312, 348, 254, 258]
+        }
         ]
     });
 }
